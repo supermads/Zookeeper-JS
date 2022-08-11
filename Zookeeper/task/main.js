@@ -121,10 +121,13 @@ Switching on the camera in the rabbit habitat...
 (" ~----( ~   Y.  )
 It looks like we will soon have more rabbits!`;
 
-answer = input("Please enter the number of the habitat you would like to view:");
+habitatList = [camel, lion, deer, goose, bat, rabbit ];
 
-animalList = [camel, lion, deer, goose, bat, rabbit];
+response = input("Please enter the number of the habitat you would like to view:");
 
-console.log(animalList[answer]);
-console.log(`---
-You've reached the end of the program. To check another habitat, please restart the watcher.`);
+while (response !== "exit") {
+    console.log(habitatList[response]);
+    response = input("Please enter the number of the habitat you would like to view:");
+};
+
+console.log("See you later!")
